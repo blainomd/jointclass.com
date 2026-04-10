@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinical Sanctuary | Onboarding</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "primary": "#004ac6",
+                        "on-tertiary-fixed": "#001d35",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#2170e4",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#e7f0ff",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-fixed": "#001a42",
+                        "on-tertiary-fixed-variant": "#03497a",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#0053db",
+                        "on-surface-variant": "#434655",
+                        "on-primary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-surface": "#313030",
+                        "background": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#d8e2ff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed-variant": "#004395",
+                        "inverse-primary": "#b4c5ff",
+                        "tertiary": "#1d5789",
+                        "outline": "#737686",
+                        "on-surface": "#1c1b1b",
+                        "on-background": "#1c1b1b",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#3c70a3",
+                        "secondary": "#0058be"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- TopAppBar from JSON - Suppressed if in transactional flow, but used here as a branding header -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none flex items-center justify-between px-6 h-16">
+<div class="text-xl font-bold text-blue-800 dark:text-blue-300 font-inter tracking-tight">Clinical Sanctuary</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:bg-slate-100/50 p-2 rounded-full transition-colors" data-icon="help">help</span>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-5xl mx-auto">
+<!-- Hero Section: Editorial & Asymmetrical -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 items-center">
+<div class="lg:col-span-7">
+<div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-semibold uppercase tracking-wider">
+                    Evidence-Based Care
+                </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                    Your Journey to <span class="text-primary italic">Recovery</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-8 max-w-xl">
+                    Welcome to Joint Class. Our curriculum is designed by clinical experts to prepare you for surgical success and a seamless return to mobility. Select your surgical path to begin.
+                </p>
+</div>
+<div class="lg:col-span-5 relative hidden lg:block">
+<div class="aspect-[4/5] rounded-[3rem] overflow-hidden bg-surface-container shadow-2xl">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="Modern clinical setting with soft natural light reflecting off clean medical surfaces, minimalist architectural medical design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtWZbZqTfvT8Y3D81iH6o46Pde46d6BnsyGRu1voI-JF5d8G_aq0BlxJWC8o3tATPxdqRQNQxQ3ZgP2qAGIm2A9qGILtq-H_LNBJIM4qYa0RjAokrT5C9GaYAcQden3Xp0VfBny8p9PGpel2OegKkeYREVfoqerBl1LoII5LZJlSfhnuelyFbIZC4DUUp3Yew1NFFISfJ_vs5IRVOmRMNpnywcqhkEi5wKhzme-nbZwYZ0-EsZU9xFkSrVk4A_yB3ZszjFlt3BsoJQ"/>
+</div>
+<!-- Glass Overlay for Texture -->
+<div class="absolute -bottom-6 -left-6 w-48 h-48 glass-panel rounded-3xl p-6 shadow-xl border border-white/20">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="verified_user">verified_user</span>
+<p class="text-sm font-medium text-on-surface">Clinically Validated Programs</p>
+</div>
+</div>
+</section>
+<!-- Selection Grid: Bento Style -->
+<section class="space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-on-surface">Select Your Specialty</h2>
+<p class="text-on-surface-variant">Personalize your recovery roadmap based on your procedure.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Knee Replacement -->
+<button class="group relative flex flex-col text-left p-8 bg-surface-container-lowest rounded-[2rem] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform active:scale-95 border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-12 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="orthopedics">orthopedics</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Knee Replacement</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Total and partial arthroplasty recovery protocols.</p>
+</div>
+<div class="mt-8 flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Start Path <span class="material-symbols-outlined text-sm ml-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+<!-- Hip Replacement -->
+<button class="group relative flex flex-col text-left p-8 bg-surface-container-highest rounded-[2rem] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform active:scale-95 border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-12 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white" data-icon="accessibility_new">accessibility_new</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Hip Replacement</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Comprehensive anterior and posterior approach care.</p>
+</div>
+<div class="mt-8 flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Start Path <span class="material-symbols-outlined text-sm ml-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+<!-- Shoulder Surgery -->
+<button class="group relative flex flex-col text-left p-8 bg-surface-container-lowest rounded-[2rem] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform active:scale-95 border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-12 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="physical_therapy">physical_therapy</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Shoulder Surgery</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Rotator cuff and total shoulder replacement guides.</p>
+</div>
+<div class="mt-8 flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Start Path <span class="material-symbols-outlined text-sm ml-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+<!-- Spine Care -->
+<button class="group relative flex flex-col text-left p-8 bg-surface-container-highest rounded-[2rem] shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform active:scale-95 border border-transparent hover:border-primary/10">
+<div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-12 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white" data-icon="personal_injury">personal_injury</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Spine Care</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Lumbar and cervical decompression recovery.</p>
+</div>
+<div class="mt-8 flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Start Path <span class="material-symbols-outlined text-sm ml-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Signature Component: Trust Metric -->
+<section class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 p-12 bg-primary text-on-primary rounded-[3rem] relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+</div>
+<div class="text-center md:text-left z-10">
+<div class="text-4xl font-bold mb-2">98%</div>
+<div class="text-primary-fixed-dim font-medium uppercase tracking-widest text-xs">Patient Readiness</div>
+<p class="mt-4 text-primary-fixed text-sm opacity-80">Our graduates feel fully prepared for the day of surgery.</p>
+</div>
+<div class="text-center md:text-left z-10">
+<div class="text-4xl font-bold mb-2">150k+</div>
+<div class="text-primary-fixed-dim font-medium uppercase tracking-widest text-xs">Successful Recoveries</div>
+<p class="mt-4 text-primary-fixed text-sm opacity-80">Join a community of patients reclaiming their mobility.</p>
+</div>
+<div class="text-center md:text-left z-10">
+<div class="text-4xl font-bold mb-2">24/7</div>
+<div class="text-primary-fixed-dim font-medium uppercase tracking-widest text-xs">Clinical Support</div>
+<p class="mt-4 text-primary-fixed text-sm opacity-80">Access to recovery resources exactly when you need them.</p>
+</div>
+</section>
+</main>
+<!-- Navigation suppressed per rule: Task is onboarding (Transactional) -->
+<footer class="mt-12 py-12 border-t-0 bg-surface-container-low text-center px-6">
+<p class="text-on-surface-variant text-sm mb-4">© 2024 Clinical Sanctuary. All procedures medically reviewed.</p>
+<div class="flex justify-center gap-6 text-xs font-semibold text-on-surface-variant uppercase tracking-widest">
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Patient Rights</a>
+</div>
+</footer>
+</body></html>

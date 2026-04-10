@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "tertiary-container": "#3c70a3",
+                        "on-tertiary-container": "#e7f0ff",
+                        "primary-container": "#2563eb",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-bright": "#fcf9f8",
+                        "surface": "#fcf9f8",
+                        "primary": "#004ac6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container": "#f0eded",
+                        "secondary": "#0058be",
+                        "on-primary-container": "#eeefff",
+                        "on-secondary-fixed": "#001a42",
+                        "inverse-primary": "#b4c5ff",
+                        "on-surface-variant": "#434655",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-background": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary": "#1d5789",
+                        "on-tertiary-fixed-variant": "#03497a",
+                        "surface-tint": "#0053db",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed-variant": "#004395",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-surface": "#313030",
+                        "secondary-container": "#2170e4",
+                        "background": "#fcf9f8",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface": "#1c1b1b",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-tertiary-fixed": "#001d35",
+                        "outline": "#737686",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clinical-shadow {
+            box-shadow: 0 24px 48px -12px rgba(28, 27, 27, 0.04);
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-[#1c1b1b]/80 glass-header flex items-center justify-between px-6 py-4 w-full shadow-[0_8px_32px_0_rgba(28,27,27,0.04)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Profile image of a healthcare professional or patient" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling senior patient with kind eyes and short grey hair in a clinical setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP4Zxd01femxC4EEgYv_2-6Moglij6dAARutf6wlg-JeNAKGzTTatn_Xf2xEq0QLVwl3pb1I55Xd5gb1-RP1WDj84F1TK5TAV2Nys7hCkIZ8nqBdqKlXR2lvPCQ3dn7NP0jyiNWUBAhu_WIqHG4qdRgVaprCWWr36WH1UxNZ42kGcRG7gTrzo22YT-q9x8nFXyeIQZwcoU4NHQhzcIuVTNhp0_f4fwM0VcmNv8eFDa4q5U-xpHFRBacC0Bix0CsoMAIccxC0_90pOc"/>
+</div>
+<span class="text-xl font-bold tracking-tighter text-[#004ac6] dark:text-[#2563eb]">Joint Class</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#f6f3f2] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#49454f]">notifications</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-7xl mx-auto space-y-12">
+<!-- Hero Section: Editorial Sanctuary -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-7 space-y-6">
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
+                    Your <span class="text-primary">Clinical</span> <br/>Community.
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    Connect with specialists and fellow travelers on the path to restorative health. Shared experiences are the strongest medicine.
+                </p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-semibold shadow-lg active:scale-95 transition-all">
+                        Join Discussion
+                    </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-semibold hover:bg-surface-container-highest transition-all">
+                        View Resources
+                    </button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-square rounded-xl overflow-hidden clinical-shadow">
+<img alt="Active seniors exercising" class="w-full h-full object-cover" data-alt="High-key professional photo of two healthy seniors performing light physical therapy exercises in a sunlit modern studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyiCXRPIc7ZxjBMfFLF4QLJ82allGM5alKY17L6GuJXhzr8ceBConDCO3cSopWpiMHTjfp5BJUe8P-YQ_NXXENDyUE_RvoFxO1p1EZldv1530V4pI2pzHDrAR6iEZvLzNIbOQdYu3snAN3K92ki5hD04XSRbiAH1I8gTR5ucGYtO4eaj9mkiyPLMB-VWpiqA1SgVh4AFZH4shgN8iZLHJPePgCc60T8-87cXh6ATQ1fE6DMYbxGz9Z3GYSz8z32Vpuun2hluZSaYRT"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl clinical-shadow max-w-[240px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" data-weight="fill">verified</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Live Support</span>
+</div>
+<p class="text-sm font-medium leading-snug">Dr. Sarah Chen is online and answering questions.</p>
+</div>
+</div>
+</section>
+<!-- Discussion Circles: Horizontal Scroll/Grid -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h2 class="text-2xl font-bold tracking-tight">Discussion Circles</h2>
+<p class="text-on-surface-variant">Targeted recovery support for your specific journey.</p>
+</div>
+<button class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Knee Circle -->
+<div class="bg-surface-container-low p-6 rounded-xl hover:bg-primary-fixed transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary group-hover:scale-110 transition-transform">medical_services</span>
+<h3 class="font-bold text-lg">Knee Recovery</h3>
+<p class="text-xs text-on-surface-variant mt-1">1.2k Members</p>
+</div>
+<!-- Hip Circle -->
+<div class="bg-surface-container-low p-6 rounded-xl hover:bg-primary-fixed transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary group-hover:scale-110 transition-transform">healing</span>
+<h3 class="font-bold text-lg">Hip Vitality</h3>
+<p class="text-xs text-on-surface-variant mt-1">840 Members</p>
+</div>
+<!-- Spine Circle -->
+<div class="bg-surface-container-low p-6 rounded-xl hover:bg-primary-fixed transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary group-hover:scale-110 transition-transform">accessibility_new</span>
+<h3 class="font-bold text-lg">Spine Health</h3>
+<p class="text-xs text-on-surface-variant mt-1">560 Members</p>
+</div>
+<!-- Pre-Op Circle -->
+<div class="bg-surface-container-low p-6 rounded-xl hover:bg-primary-fixed transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary group-hover:scale-110 transition-transform">event_note</span>
+<h3 class="font-bold text-lg">Pre-Op Prep</h3>
+<p class="text-xs text-on-surface-variant mt-1">2.1k Members</p>
+</div>
+</div>
+</section>
+<!-- Expert Q&A: Bento Layout -->
+<section class="space-y-6">
+<h2 class="text-2xl font-bold tracking-tight">Expert Q&amp;A</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Expert Spotlight -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-xl clinical-shadow p-8 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-48 h-48 rounded-full overflow-hidden shrink-0">
+<img alt="Orthopedic Surgeon" class="w-full h-full object-cover" data-alt="Professional portrait of a middle-aged male orthopedic surgeon in a white coat, leaning confidently with a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbdFzUmbecS0QRe1qy_R4W_Aboht_CvnsG65AakzjFWkD1sIZxDHEmuZBtFCYwCWg3e1X3HRPfX7SOP8u6Mf5XtzXcUs75561bFyF-EnTXdR0pD15nL4iVXq7dKX29d3wAK0T5HBFSzubtIK2WnlD_5kZpwNkvY5NQIVXIi5n5sjijAm0j1v7UW4-OQ4-0xgvJu0w-2lDTtX8tnyY11UwcNlb89WM4J3HPp__yB8RpfJcDAd5MqrHfsRZ63uaOt7Plt4k4IImFEKzQ"/>
+</div>
+<div class="space-y-4 text-center md:text-left">
+<div class="inline-block px-3 py-1 bg-primary-fixed text-primary text-xs font-bold rounded-full uppercase tracking-widest">
+                            Staff Surgeon
+                        </div>
+<h3 class="text-3xl font-bold">Dr. James Miller</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            "The first six weeks of recovery define the next six years of mobility. Ask me about postoperative pain management protocols."
+                        </p>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                            Read Interview 
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Quick Experts -->
+<div class="space-y-6">
+<div class="bg-surface-container-low p-6 rounded-xl flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden shrink-0">
+<img alt="Physical Therapist" class="w-full h-full object-cover" data-alt="Portrait of a female physical therapist in athletic wear, smiling warmly in a clinical studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfyeYuSNdRspAzv6LrQRNXFMt0_t-4jZefekJrLpUkKHtUnE_tbLLzV9kg7M6TNXRRHK0bn5D5jLaZR_axIQKRH0BvFJ5pQ3QwWcx2mskZ-qZxdT6v7izlclwYnSppbel4HglbSBkNEgpRzbzdBzCD2R8COHruOxKKzw2wmQp2Ty5PK5BcPdOxQ5M-pikAcubWBsmiNhcNJAaRrXVhiLlCpZbD9zhaJe_0aNR88PNIFwfRqAjTSmahgP6nsG_SQIuGTT58N88dJ55l"/>
+</div>
+<div>
+<h4 class="font-bold">Elena Rodriguez</h4>
+<p class="text-xs text-on-surface-variant">Lead PT, Motion Rehab</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden shrink-0">
+<img alt="Care Coordinator" class="w-full h-full object-cover" data-alt="Modern professional portrait of a healthcare coordinator in a navy scrubs, looking professional and attentive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPJWMryRLZcuoohQjdWFCvNcVaVyEea8b_6Wg-fMAwFbmTqm46tuMYMxMRPO2whVHmvgmUcLTJs251D5T4pGeKmXltKn_tPb-NdVRjTX_vBAkeN3uS4SVNQwkpVrHxJ6I1assc6FD2BXGpm6FOLk-dzX-k_26JETSzk4QWdJ8GvkU8TXWw3Yo2DAJptrQP8Sn_tBtud8xebQeEPYyw_ylrDzR7sxLOtgdHdMOE6wa5euHHCwAWAkKR2O9ZuEJ_-Fe1vNu8fe_YuXJq"/>
+</div>
+<div>
+<h4 class="font-bold">Mark Thompson</h4>
+<p class="text-xs text-on-surface-variant">Recovery Specialist</p>
+</div>
+</div>
+<div class="bg-primary p-6 rounded-xl text-on-primary">
+<h4 class="font-bold mb-2">Next Live Session</h4>
+<p class="text-sm opacity-90 mb-4">Managing Scar Tissue with Dr. Patel</p>
+<p class="text-xs font-bold uppercase tracking-tighter">Starts in 45:00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Feed: Editorial Success Stories -->
+<section class="space-y-8">
+<h2 class="text-2xl font-bold tracking-tight">Community Success Stories</h2>
+<div class="columns-1 md:columns-2 gap-8 space-y-8">
+<!-- Card 1 -->
+<div class="break-inside-avoid bg-surface-container-lowest rounded-xl clinical-shadow overflow-hidden group">
+<div class="relative aspect-video">
+<img alt="Active Senior Golfing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A fit senior man in his 70s swinging a golf club on a lush green course during the golden hour sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMpvZz4ra5QvWrZHVkV-BVAqUYlAGwaFnW0AHd9GLaVBhtKRY3ZZXuEvzlNxSctjTbFCfS_ITe6Vht28-ItvrmvUm86oiAYenWY3CwMNOlPRO-k4XNZ69jqY1XYa90TwFLACpDPhkbbQpWz1Yr_sewgNS1hkEObkah-1wBLaPnESzzRmIGyQse2U668e_Kc1NgUFHUTss_i2rzL4rd2C8UfRTt85X6YtXdtvGAM6quirTefC2fcC4Cwxjigic4FeiT1ScH4iaB2wQ4"/>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-primary shadow-sm">Knee Replacement</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<h3 class="text-2xl font-bold leading-tight">"Back on the golf course! 4 months post-op and feeling stronger than ever."</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Arthur P. shares his routine for maintaining flexibility and the mental hurdles of getting back to his favorite hobby.
+                        </p>
+<div class="flex items-center justify-between pt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">thumb_up</span>
+<span class="text-sm font-bold">142 Cheers</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">2 hours ago</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="break-inside-avoid bg-surface-container-lowest rounded-xl clinical-shadow p-8 space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high shrink-0">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a middle aged woman with gentle features and short hair, looking optimistic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEy16bN5mnhG2jqHXkU2xoy5QrAC-tbn_HOpAzRrEcQKvkMVIvY1nr4IF2DyIELfRvC0ncmsNQVQ7p7c02HOlcxDqetC_o34kJNxoj73d9D8NXP8XCURsCDINZ8aQyLER-QqfQ74Q671jCLj2fkLm6Wt7ovCQ0CsK1a2lHVOLK_eturJvrFPVGB2GwFLk-FIqL527Re4F26E_1hTMODUhWxR4HS39E3Ik2NX1t2pYQtJaBrZZHrkfU9i7prclF-eR6CpM2MFGiKRH6"/>
+</div>
+<div>
+<h4 class="font-bold">Margaret L.</h4>
+<p class="text-xs text-on-surface-variant">Hip Replacement • Week 12</p>
+</div>
+</div>
+<blockquote class="text-xl italic font-medium leading-relaxed text-on-surface">
+                        "The community circles were my lifeline during the first week. Knowing that my discomfort was 'normal' gave me the peace of mind to keep pushing through my PT exercises."
+                    </blockquote>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">chat_bubble</span> 24 Comments
+                        </button>
+<button class="flex items-center gap-2 text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span> Share
+                        </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="break-inside-avoid bg-surface-container-lowest rounded-xl clinical-shadow overflow-hidden group">
+<div class="relative aspect-[4/3]">
+<img alt="Senior woman swimming" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Dynamic shot of a senior woman swimming laps in a clean, blue indoor pool with sunlight reflecting on the water surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCicT3hmg9JrB0iVMoU2auoe8RZpMn3WsB0dm3ywYrufs3wgm4RAW3FJ-FWd8XadqBpTC-g_BBdJSOXkJe8pcvOefADGRIAoDzH_KB6Ont_B3kcAn4IQCdRmlz6G6KoXmam5nF-0NKsPQjd_6BQTeVb5taeVzoWwi-g1p5saoiYqmt_B2o7mouQfuQz_hfZ6Fn8N--apIuMCKwvgGl9EqIEwX5Onx-SfrmeUVBrD3BIOldRnKbWlA4t3OhX69ypXUcdFoyOSnwysvri"/>
+</div>
+<div class="p-8 space-y-4">
+<h3 class="text-2xl font-bold leading-tight">"Water therapy was the game changer for my mobility."</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            How low-impact resistance training helped Susan overcome a plateau in her recovery journey.
+                        </p>
+<div class="flex items-center justify-between pt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">thumb_up</span>
+<span class="text-sm font-bold">289 Cheers</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Yesterday</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-6 bg-[#fcf9f8] dark:bg-[#1c1b1b] shadow-[0_-4px_24px_0_rgba(28,27,27,0.04)] rounded-t-[1.5rem]">
+<a class="flex flex-col items-center justify-center bg-[#dbe1ff] dark:bg-[#004ac6]/30 text-[#004ac6] dark:text-[#dbe1ff] rounded-2xl px-5 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#49454f] dark:text-[#cac4d0] px-5 py-1.5 hover:text-[#004ac6] dark:hover:text-[#2563eb] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Team</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#49454f] dark:text-[#cac4d0] px-5 py-1.5 hover:text-[#004ac6] dark:hover:text-[#2563eb] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Progress</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#49454f] dark:text-[#cac4d0] px-5 py-1.5 hover:text-[#004ac6] dark:hover:text-[#2563eb] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

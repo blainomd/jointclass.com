@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Surgical Prep Checklist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "inverse-surface": "#313030",
+                        "tertiary-container": "#3c70a3",
+                        "secondary": "#0058be",
+                        "on-tertiary-container": "#e7f0ff",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-tint": "#0053db",
+                        "background": "#fcf9f8",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#1d5789",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#737686",
+                        "surface-variant": "#e5e2e1",
+                        "primary-fixed": "#dbe1ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-tertiary-fixed-variant": "#03497a",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-container": "#fefcff",
+                        "surface-bright": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2563eb",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "surface-container": "#f0eded",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-primary-container": "#eeefff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#001d35",
+                        "on-surface-variant": "#434655",
+                        "tertiary-fixed": "#d0e4ff",
+                        "surface": "#fcf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-container": "#2170e4",
+                        "primary": "#004ac6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#00174b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="Patient Profile" class="w-full h-full object-cover" data-alt="Close up of a friendly professional female doctor in white coat smiling slightly in a clinical office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfWdoX5SOPJT3Tqas9KVInzTe6-d2rvvs9SHBdgyEnAflnAhnHa4bXfCjuBOc20W4rr_RR8-ccN29YZ2Qf5Isco0YvjDCoYs53ND2k02n33JdUT0vhefR0tzQIDGrRv-6p_nonSlQTLz-Tp5pLXG9YGo6FhcuBBy3M25HHkTwKQVLmz9z16lRIXoVSvtdvPUOgkjHS9s1NDVL-qd-jpmcw2xfTemQgS5eMs0WaXcenhqU9Fb0715IuqdDaavgntsoBK4sO8hPRMJvi"/>
+</div>
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100 font-sans tracking-tight">Surgical Prep</span>
+</div>
+<button class="text-stone-500 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-4xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-10">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-background tracking-tight mb-4 leading-tight">
+                Surgical Readiness <br/>Checklist
+            </h1>
+<!-- Status Overview Bento Card -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+<div class="md:col-span-2 bg-primary-container p-8 rounded-xl text-on-primary-container relative overflow-hidden shadow-sm">
+<div class="relative z-10">
+<span class="text-primary-fixed text-sm font-semibold uppercase tracking-widest mb-2 block">Current Progress</span>
+<div class="flex items-baseline gap-2">
+<span class="text-6xl font-bold">75%</span>
+<span class="text-xl opacity-90">Prepared</span>
+</div>
+<div class="mt-6 w-full bg-white/20 h-3 rounded-full overflow-hidden">
+<div class="bg-white h-full w-[75%] rounded-full"></div>
+</div>
+<p class="mt-4 text-sm font-medium opacity-80">Final checks: Home preparation and fasting.</p>
+</div>
+<!-- Decorative abstract graphic -->
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<div class="bg-surface-container-highest p-6 rounded-xl flex flex-col justify-center">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-4xl" data-icon="calendar_today" data-weight="fill">calendar_today</span>
+</div>
+<span class="text-on-surface-variant text-sm font-medium">Surgery Date</span>
+<span class="text-xl font-bold mt-1">Oct 24, 2023</span>
+<span class="text-primary text-sm font-semibold mt-2">4 Days to go</span>
+</div>
+</div>
+</section>
+<!-- Checklist Categories -->
+<div class="space-y-12 mb-12">
+<!-- Medications -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+</div>
+<h2 class="text-2xl font-bold">Medications</h2>
+</div>
+<div class="space-y-4">
+<!-- Item Completed -->
+<div class="group flex items-start gap-4 p-5 rounded-xl bg-surface-container-low transition-all border-l-4 border-primary">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-on-surface line-through opacity-60">Stop blood thinners (7 days before)</h3>
+<p class="text-sm text-on-surface-variant">Confirmed with Dr. Aris on Monday.</p>
+</div>
+</div>
+<!-- Item Pending -->
+<div class="group flex items-start gap-4 p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="mt-1">
+<span class="material-symbols-outlined text-outline" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-on-surface">Review anesthesia plan</h3>
+<p class="text-sm text-on-surface-variant">Scheduled for pre-op phone call tomorrow at 10:00 AM.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Home Prep -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="home_work">home_work</span>
+</div>
+<h2 class="text-2xl font-bold">Home Prep</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-4 p-5 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-outline mt-1" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<div>
+<h3 class="font-bold">Clear walking paths</h3>
+<p class="text-sm text-on-surface-variant">Remove rugs and clutter from main hallway.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-outline mt-1" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<div>
+<h3 class="font-bold">Set up recovery station</h3>
+<p class="text-sm text-on-surface-variant">Chargers, medications, and water in reach.</p>
+</div>
+</div>
+<div class="md:col-span-2 flex items-start gap-4 p-5 rounded-xl bg-surface-container-low border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h3 class="font-bold line-through opacity-60">Arrange transportation</h3>
+<p class="text-sm text-on-surface-variant">Confirmed with John for 6:00 AM pickup.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Documentation & Personal Mixed Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<h2 class="text-2xl font-bold">Documentation</h2>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="font-semibold line-through opacity-60">Sign surgical consent</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="font-semibold line-through opacity-60">Upload insurance card</span>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<h2 class="text-2xl font-bold">Personal</h2>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-surface-container-lowest shadow-sm rounded-xl">
+<span class="material-symbols-outlined text-outline" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-semibold text-error">Last meal by midnight</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-lowest shadow-sm rounded-xl">
+<span class="material-symbols-outlined text-outline" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-semibold">Hibiclens shower</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Notes Section -->
+<section class="mt-8">
+<div class="bg-primary-fixed/30 p-8 rounded-xl relative overflow-hidden">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="stylus_note">stylus_note</span>
+<h2 class="text-xl font-bold text-on-primary-fixed-variant">Questions for my Doctor</h2>
+</div>
+<textarea class="w-full bg-white/50 border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary min-h-[120px] placeholder:text-outline" placeholder="Type any questions here to discuss during your pre-op phone call..."></textarea>
+<div class="mt-4 flex justify-end">
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-opacity">Save Note</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-6 px-4 bg-white/90 dark:bg-stone-900/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-3xl">
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-1.5 hover:text-blue-500 transition-all tap-highlight-none active:opacity-80">
+<span class="material-symbols-outlined text-2xl" data-icon="analytics">analytics</span>
+<span class="text-xs font-medium font-sans">Status</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-1.5 hover:text-blue-500 transition-all tap-highlight-none active:opacity-80">
+<span class="material-symbols-outlined text-2xl" data-icon="view_timeline">view_timeline</span>
+<span class="text-xs font-medium font-sans">Timeline</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-1.5 hover:text-blue-500 transition-all tap-highlight-none active:opacity-80">
+<span class="material-symbols-outlined text-2xl" data-icon="accessibility_new">accessibility_new</span>
+<span class="text-xs font-medium font-sans">Movement</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-2xl px-5 py-1.5 tap-highlight-none active:opacity-80">
+<span class="material-symbols-outlined text-2xl" data-icon="fact_check" data-weight="fill">fact_check</span>
+<span class="text-xs font-medium font-sans">Checklist</span>
+</div>
+</nav>
+</body></html>

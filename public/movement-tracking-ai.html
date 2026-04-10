@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinical Sanctuary - Movement AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "primary": "#004ac6",
+                        "on-tertiary-fixed": "#001d35",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#2170e4",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-container": "#e7f0ff",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-fixed": "#001a42",
+                        "on-tertiary-fixed-variant": "#03497a",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#0053db",
+                        "on-surface-variant": "#434655",
+                        "on-primary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-surface": "#313030",
+                        "background": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#d8e2ff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed-variant": "#004395",
+                        "inverse-primary": "#b4c5ff",
+                        "tertiary": "#1d5789",
+                        "outline": "#737686",
+                        "on-surface": "#1c1b1b",
+                        "on-background": "#1c1b1b",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#3c70a3",
+                        "secondary": "#0058be"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .skeletal-overlay {
+            background-image: radial-gradient(circle, rgba(37, 99, 235, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased mb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none h-16 flex items-center justify-between px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Patient Profile Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a medical professional in clean white scrubs with a calm, reassuring expression and soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJfG7x5cvr_Tepj3F4NKfwmpxkvjwbWPWnBd4hPtbYd8A7nEfODGO8pP79Dl3029faX6owsZpuS1rSIwK3dYyc-60SRv2nbuUegcpJs17M4lS8XzOAi8p4luMnaq-QA-srQDf0I3fch-EDzt9ujDfVWGZcoDtqBDPBaFYvb8skhw7nBhZ-cPlSXzT5y-Mot1s7nCPhu_dGijC8OlO-yy6xqZ2MHVuU9bz92mlKLVLAvC8hsWEPuH-AyxdYdVS9eV0NVvTIxpl12Tq-"/>
+</div>
+<span class="text-xl font-bold text-blue-800 dark:text-blue-300">Clinical Sanctuary</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-24 px-4 max-w-4xl mx-auto">
+<!-- Instruction Banner -->
+<div class="mb-8 text-center">
+<div class="inline-flex items-center gap-3 bg-primary-fixed px-6 py-3 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="text-on-primary-fixed font-medium">Position your knee within the frame</span>
+</div>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Lower Limb Analysis</h1>
+<p class="text-on-surface-variant max-w-md mx-auto">AI-powered kinematic tracking for post-operative recovery monitoring.</p>
+</div>
+<!-- Camera / AI Visualization Area -->
+<div class="relative w-full aspect-video rounded-[2rem] overflow-hidden bg-surface-container-highest shadow-2xl mb-8">
+<!-- Simulated Camera Feed -->
+<img alt="Camera View" class="w-full h-full object-cover opacity-90 grayscale-[20%]" data-alt="A person in athletic gear performing a slow, controlled squat in a brightly lit, minimalist clinical gym environment with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzLHIORW2r16R6RtmFNhJs1DeurMIk6aQ22xORmKIfBu9hIQTaV_U7tkh_V0d8sNS8TYJpWNDfb5DrZ2sAOLJnxnfU7rICdVgp4H9Nbb9V9PVoZ5W3UY8qVoq8H9AHUUlkwd4rMN6yGkWbogPVOYzOUjy1DImUfOTxtqkr1oMtmGXgAI2ZLmI20_Vpw4hwxfgtyCzGbHAzT4qiJmn9J7LZgfmXF-_aevtmBdLgmmKbnyyn1CEnxzPfM43K4oB3owLOffBl7cvdMqRE"/>
+<!-- Skeletal & UI Overlay -->
+<div class="absolute inset-0 skeletal-overlay flex items-center justify-center pointer-events-none">
+<!-- SVG Skeletal Overlay (Simplified Concept) -->
+<svg class="w-full h-full absolute inset-0" viewbox="0 0 1000 600">
+<!-- Right Leg Points -->
+<circle class="opacity-80" cx="500" cy="200" fill="#2563eb" r="8"></circle> <!-- Hip -->
+<circle cx="480" cy="400" fill="#2563eb" r="10"></circle> <!-- Knee -->
+<circle class="opacity-80" cx="520" cy="550" fill="#2563eb" r="8"></circle> <!-- Ankle -->
+<!-- Bones -->
+<line stroke="#2563eb" stroke-dasharray="8 4" stroke-width="4" x1="500" x2="480" y1="200" y2="400"></line>
+<line stroke="#2563eb" stroke-width="4" x1="480" x2="520" y1="400" y2="550"></line>
+<!-- Angle Arc -->
+<path d="M 460 380 A 40 40 0 0 1 500 420" fill="none" stroke="#2563eb" stroke-linecap="round" stroke-width="4"></path>
+<text fill="#2563eb" font-size="24" font-weight="800" x="410" y="405">95°</text>
+</svg>
+<!-- Recording Status Indicator -->
+<div class="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 bg-black/40 backdrop-blur-md rounded-full">
+<div class="w-2 h-2 rounded-full bg-error animate-pulse"></div>
+<span class="text-white text-xs font-bold tracking-widest">LIVE AI TRACKING</span>
+</div>
+<!-- Calibration Guide Box -->
+<div class="absolute inset-0 border-[32px] border-surface/50 border-double opacity-20"></div>
+</div>
+<!-- Floating Data Widgets -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-3">
+<div class="bg-white/90 backdrop-blur-xl p-4 rounded-2xl shadow-lg border border-white/20">
+<p class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1">Rep Count</p>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-on-surface">12</span>
+<span class="text-on-surface-variant font-medium text-sm">/ 20</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-6 left-6">
+<div class="bg-primary/90 backdrop-blur-xl p-4 rounded-2xl shadow-lg text-white">
+<p class="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-1">Peak ROM</p>
+<span class="text-4xl font-extrabold">108°</span>
+</div>
+</div>
+</div>
+<!-- Metric Detail Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-surface-container-low p-6 rounded-[1.5rem]">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">timeline</span>
+</div>
+<h3 class="font-bold text-lg">Velocity</h3>
+</div>
+<p class="text-3xl font-extrabold text-on-surface">1.2 <span class="text-sm font-medium text-on-surface-variant">m/s</span></p>
+<div class="mt-4 h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[65%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[1.5rem]">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">balance</span>
+</div>
+<h3 class="font-bold text-lg">Stability</h3>
+</div>
+<p class="text-3xl font-extrabold text-on-surface">High</p>
+<p class="text-sm text-on-surface-variant mt-2">Variance: &lt; 4%</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-[1.5rem] flex flex-col justify-center">
+<button class="w-full h-full bg-error hover:bg-error/90 text-white rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">stop_circle</span>
+<span class="font-bold text-lg">Stop Session</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-8 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-[0_-4px_20px_0_rgba(0,0,0,0.04)] z-50 rounded-t-3xl">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-inter text-[11px] font-medium mt-1">Path</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-2xl px-5 py-2 transition-transform active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<span class="font-inter text-[11px] font-medium mt-1">Movement</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">checklist_rtl</span>
+<span class="font-inter text-[11px] font-medium mt-1">Prep</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-inter text-[11px] font-medium mt-1">Outcome</span>
+</button>
+</nav>
+</body></html>
