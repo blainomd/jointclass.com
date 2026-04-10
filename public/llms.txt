@@ -1,0 +1,11 @@
+# JointClass
+
+> Total joint replacement recovery tracking. AI-powered exercise programs, surgical prep checklists, progress reports, and movement tracking.
+
+## What we do
+JointClass is the patient-facing recovery platform for joint replacement surgery. Tracks daily goals, medication adherence, exercise completion, and movement via phone sensors. Integrates with SurgeonValue for RTM billing and PROM collection.
+
+## Links
+- Website: https://jointclass.com
+- SurgeonValue: https://surgeonvalue.com
+- co-op.care: https://co-op.care
